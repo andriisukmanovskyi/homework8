@@ -1,0 +1,61 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <xsd:element name="gems">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="gem" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="name" type="xsd:string"/>
+                            <xsd:element name="preciousness" type="preciousness"/>
+                            <xsd:element name="origin" type="origin"/>
+                            <xsd:element name="visualParams">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="color" type="color"/>
+                                        <xsd:element name="transparency" type="transparency"/>
+                                        <xsd:element name="facesNumber" type="faces"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="value" type="xsd:int"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:simpleType name="origin">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value=".*,.*"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="transparency">
+        <xsd:restriction base="xsd:double">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="faces">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="4"/>
+            <xsd:maxInclusive value="15"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="preciousness" final="restriction">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="PRECIOUS"/>
+            <xsd:enumeration value="SEMIPRECIOUS"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="color" final="restriction">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="GREEN"/>
+            <xsd:enumeration value="RED"/>
+            <xsd:enumeration value="YELLOW"/>
+            <xsd:enumeration value="BLUE"/>
+            <xsd:enumeration value="PINK"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

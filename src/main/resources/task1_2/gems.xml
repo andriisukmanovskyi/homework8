@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gems>
+    <gem>
+        <name>someGem1</name>
+        <preciousness>PRECIOUS</preciousness>
+        <origin>Jamaica, Kingston</origin>
+        <visualParams>
+            <color>GREEN</color>
+            <transparency>0.5</transparency>
+            <facesNumber>4</facesNumber>
+        </visualParams>
+        <value>3</value>
+    </gem>
+    <gem>
+        <name>someGem2</name>
+        <preciousness>SEMIPRECIOUS</preciousness>
+        <origin>Ukraine, Lviv</origin>
+        <visualParams>
+            <color>YELLOW</color>
+            <transparency>0.1</transparency>
+            <facesNumber>12</facesNumber>
+        </visualParams>
+        <value>7</value>
+    </gem>
+    <gem>
+        <name>someGem3</name>
+        <preciousness>PRECIOUS</preciousness>
+        <origin>USA, Washington</origin>
+        <visualParams>
+            <color>BLUE</color>
+            <transparency>0.8</transparency>
+            <facesNumber>6</facesNumber>
+        </visualParams>
+        <value>2</value>
+    </gem>
+</gems>
