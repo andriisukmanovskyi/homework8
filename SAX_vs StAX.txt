@@ -1,0 +1,11 @@
+Different between SAX and StAX
+
+SAX:
+1) It is a Push Parser
+2) It can only do XML reading
+3) It has support for Schema validation during XML writing
+
+StAX:
+1) It is a Pull Parser
+2) It can do both XML reading & writing
+3) It has no support of Schema validation during XML writing
